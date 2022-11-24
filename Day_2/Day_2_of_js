@@ -1,0 +1,32 @@
+//que -1
+let marks = {
+  jay: 90,
+  harsh: 97,
+  krutik: 99,
+  sandip: 98,
+  yash: 100
+}
+for(let key=0; key<Object.keys(marks).length; key++){
+  console.log("the marks of" + Object.keys(marks)[key] + "are : " + marks[Object.keys(marks)[key]])
+}
+//que - 2
+for(let i in marks){
+  console.log(i)
+}
+
+//que - 3
+
+let cn=7
+let i
+while(i!=cn){
+  i = prompt("Enter the number")
+}
+console.log("You have entered the correct number")
+
+
+// // que -4
+const mean = (a, b, c, d)=>{
+  return (a+b+c+d) / 4;
+}
+
+console.log(mean(1,1,1,1))
