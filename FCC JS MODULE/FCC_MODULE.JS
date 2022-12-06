@@ -745,3 +745,324 @@ function phoneticLookup(val) {
   // Only change code above this line
   return result;
 }
+// ------------------------------------------------------------------------------------------------
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+  // Only change code above this line
+}
+// ------------------------------------------------------------------------------------------------
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist": "JACK",
+    "title": "Man",
+    "release_year": 2022,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  }
+];
+// ------------------------------------------------------------------------------------------------
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"]
+// ------------------------------------------------------------------------------------------------
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+const secondTree = myPlants[1].list[1];
+// ------------------------------------------------------------------------------------------------
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  const album = records[id];
+
+  if (value === "") {
+    delete album[prop];
+  }
+
+  else if (prop !== "tracks") {
+    album[prop] = value;
+  }
+
+  else {
+    album["tracks"] = album["tracks"] || [];
+    album["tracks"].push(value);
+  }
+
+  return records;
+}
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+// ------------------------------------------------------------------------------------------------
+// Setup
+const myArray = [];
+let i=5
+
+while(i>=0){
+  myArray.push(i);
+  i--;
+}
+
+// ------------------------------------------------------------------------------------------------
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for(let i=1; i<6; i++){
+  myArray.push(i)
+}
+// ------------------------------------------------------------------------------------------------
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for(let i=1; i<10; i+=2){
+  myArray.push(i)
+}
+// ------------------------------------------------------------------------------------------------
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for(let i=9; i>0; i-=2){
+  myArray.push(i)
+}
+// ------------------------------------------------------------------------------------------------
+// Setup
+const myArr = [2, 3, 4, 5, 6];
+
+// Only change code below this line
+let total = 0
+for( let i=0; i<myArr.length; i++){
+  total += myArr[i]
+}
+// ------------------------------------------------------------------------------------------------
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+  for(let i=0; i<arr.length; i++){
+    for(let j=0; j<arr[i].length; j++){
+      product = product * arr[i][j]
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+// ------------------------------------------------------------------------------------------------
+// Setup
+const myArray = [];
+let i = 10;
+
+// Only change code below this line
+do {
+  myArray.push(i);
+  i++;
+}while (i < 5) 
+// ------------------------------------------------------------------------------------------------
+function sum(arr, n) {
+  // Only change code below this line
+  if(n<=0){
+    return 0;
+  }
+  else{
+    return sum(arr, n-1) + arr[n-1]
+  }
+  // Only change code above this line
+}
+// ------------------------------------------------------------------------------------------------
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for (let x = 0; x < contacts.length; x++) {
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+        return contacts[x][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+  // Only change code above this line
+}
+
+lookUpProfile("Akira", "likes");
+// ------------------------------------------------------------------------------------------------
+function randomFraction() {
+  // Only change code below this line.
+  var result = 0;
+
+  while (result === 0) {
+    result = Math.random();
+  }
+
+  return result;
+  // Only change code above this line.
+}
+// ------------------------------------------------------------------------------------------------
+function randomWholeNum() {
+
+  // Only change code below this line
+  var ran = 0
+  while (ran === 0){
+    ran = Math.floor(Math.random() * 10);
+  } 
+
+  return ran;
+}
+// ------------------------------------------------------------------------------------------------
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  var ran =0
+  while(ran === 0){
+    ran = Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+
+  }
+  return ran;
+  // Only change code above this line
+}
+// ------------------------------------------------------------------------------------------------
+function convertToInteger(str) {
+  var a
+  a = parseInt(str)
+  return a
+  }
+  
+  convertToInteger("56");
+// ------------------------------------------------------------------------------------------------
+function convertToInteger(str) {
+  var a
+  a = parseInt(str, 2)
+  return a
+  }
+  
+  convertToInteger("10011");
+// ------------------------------------------------------------------------------------------------
+function checkEqual(a, b) {
+  return a == b ? "Equal" : "Not Equal"
+}
+
+checkEqual(1, 2);
+// ------------------------------------------------------------------------------------------------
+function checkSign(num) {
+  return num > 0 ? "positive" : num == 0 ? "zero" : "negative";
+}
+
+checkSign(10);
+// ------------------------------------------------------------------------------------------------
+// Only change code below this line
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+}
+// Only change code above this line
+// ------------------------------------------------------------------------------------------------
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum < startNum) {
+    return [];
+  } else {
+    const numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+// ------------------------------------------------------------------------------------------------
