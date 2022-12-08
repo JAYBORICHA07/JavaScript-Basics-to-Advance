@@ -22,7 +22,7 @@ function editInPlace() {
 editInPlace();
 //   --------------------------------------------------------------------------------------------------------
 function freezeObj() {
-    const MATH_CONSTANTS = {
+    const MATH_CONSTANTS = { 
       PI: 3.14
     };
     // Only change code below this line
