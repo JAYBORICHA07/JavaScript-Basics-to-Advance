@@ -421,3 +421,44 @@ Array.prototype.myFilter = function (callback) {
   return newArray;
 };
 // ---------------------------------------------------------------------------------------------------
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+  return anim.slice(beginSlice,endSlice)
+  // Only change code above this line
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+// ---------------------------------------------------------------------------------------------------
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+  return cities.slice(0,3);
+
+  // Only change code above this line
+}
+
+const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+// ---------------------------------------------------------------------------------------------------
+function nonMutatingConcat(original, attach) {
+  // Only change code below this line
+return original.concat(attach)
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingConcat(first, second);
+// ---------------------------------------------------------------------------------------------------
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  return original.concat(newItem);
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);
+// ---------------------------------------------------------------------------------------------------
