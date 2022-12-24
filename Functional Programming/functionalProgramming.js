@@ -637,3 +637,41 @@ function sentensify(str) {
 }
 sentensify("May-the-force-be-with-you");
 // ---------------------------------------------------------------------------------------------------
+// the global variable
+var globalTitle = "Winter Is Coming";
+
+function urlSlug(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .split(/\s+/)
+    .join("-");
+}
+
+var winterComing = urlSlug(globalTitle); 
+// ---------------------------------------------------------------------------------------------------
+function checkPositive(arr) {
+
+  return arr.every(val => val > 0);
+}
+checkPositive([1, 2, 3, -4, 5]);
+// ---------------------------------------------------------------------------------------------------
+function checkPositive(arr) {
+  // Only change code below this line
+  return arr.some(elem => elem > 0);
+
+  // Only change code above this line
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+// ---------------------------------------------------------------------------------------------------
+function add(x) {
+  // Only change code below this line
+
+  return y => z => x + y + z;
+
+  // Only change code above this line
+}
+
+add(10)(20)(30);
+// ---------------------------------------------------------------------------------------------------
