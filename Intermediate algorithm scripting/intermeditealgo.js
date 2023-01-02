@@ -372,3 +372,62 @@ function orbitalPeriod(arr) {
 // test here
 orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]);
 //   ----------------------------------------------------------------------------------------------------
+function cleanString(str) {
+  return str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+}
+
+function palindrome(str) {
+  let strr = cleanString(str);
+  let s=0
+  let e=(strr.length-1)
+  while(s<e){
+    if(strr[s] != strr[e]){
+      return false;
+      break;
+    }
+    s++;
+    e--;
+  }
+  return true;
+}
+
+palindrome("eye");
+//   ----------------------------------------------------------------------------------------------------
+function convertToRoman(num) {
+  let roman = '';
+  let romanNumerals = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1
+  };
+  for (let i in romanNumerals) {
+    while (num >= romanNumerals[i]) {
+      roman += i;
+      num -= romanNumerals[i];
+    }
+  }
+  return roman;
+}
+
+convertToRoman(36);
+//   ----------------------------------------------------------------------------------------------------
+function rot13(str) {
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const input = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
+  return str.replace(/[A-Z]/g, c => alphabet[input.indexOf(c)]);
+}
+
+console.log(rot13('SERR PBQR PNZC'));  // "FREE CODE CAMP"
+
+rot13("SERR PBQR PNZC");
+//   ----------------------------------------------------------------------------------------------------
